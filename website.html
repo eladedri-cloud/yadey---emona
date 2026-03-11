@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ידי אמונה | הנדימן מקצועי</title>
+
+    <meta name="description"
+    content="הנדימן מקצועי בחדרה והסביבה – תיקונים לבית, התקנת טלוויזיות, אינסטלציה קלה והרכבות רהיטים. שירות מהיר באזור חדרה, קיסריה, בנימינה ונתניה.">
+
+    <link rel="icon" type="image/png" href="photo/wrench-tool.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <meta name="author" content="אלעד אדרי">
+    <meta name="keywords" content="הנדימן חדרה, תיקונים בבית, הנדימן קיסריה, התקנת טלוויזיה, תיקוני אינסטלציה">
+    <meta property="og:title" content="ידי אמונה - הנדימן מקצועי">
+    <meta property="og:description" content="תיקונים, התקנות והרכבות באזור חדרה והסביבה">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="photoforshare.jpeg">
+    <meta name="geo.region" content="IL">
+    <meta name="geo.placename" content="חדרה">
+    <meta name="geo.position" content="32.434;34.919">
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Rubik',sans-serif}
+        body{background:#f4f6f9;color:#222;scroll-behavior:smooth}
+
+        header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    padding: 5px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 15px rgba(0,0,0,0.06);
+    z-index:1000;
+}
+
+header nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:#222;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:0.5px;
+    transition:all .3s ease;
+    position:relative;
+}
+        .logo{font-weight:700;font-size:20px}
+        nav a{
+        margin:0 15px;
+        text-decoration:none;
+        color:#333;
+        font-weight:500;
+        transition:.3s
+        }
+        nav a:hover{color:#ff9800}
+
+        .hero{
+        min-height:100vh;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('photo/photoshimri.jpg');
+        background-size: cover;
+        background-position: center;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        color:white;
+        padding:20px;
+        margin-top:80px;
+        }
+
+        .hero h1{font-size:52px;margin-bottom:20px}
+        .hero p{font-size:20px;margin-bottom:20px}
+.hero-slogan {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.hero-slogan span {
+    color: #ff9800;
+    font-weight: 800;
+}
+
+.hero-slogan::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ff9800;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+.hero-slogan {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: sloganFade 1.2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes sloganFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        .btn{
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding:15px 30px;
+        border-radius:40px;
+        text-decoration:none;
+        font-weight:500;
+        transition:.3s;
+        margin:10px;
+        }
+
+        .btn-primary{
+        background:#ff9800;
+        color:white;
+        box-shadow:0 8px 25px rgba(255,152,0,.4);
+        }
+        .btn-primary:hover{transform:translateY(-4px)}
+
+        .btn-whatsapp{
+        background:#25D366;
+        color:white;
+        }
+        .btn-whatsapp:hover{transform:translateY(-4px)}
+
+        .call-btn{background:#222;color:white}
+        @media(min-width:769px){.call-btn{display:none}}
+
+        section{padding:90px 20px;text-align:center}
+        h2{font-size:36px;margin-bottom:50px}
+
+        .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:30px;
+        max-width:1100px;
+        margin:auto;
+        }
+
+        #grid2 {
+        max-width:1000px;
+        }
+
+        .card{
+        background:white;
+        padding:30px 20px;
+        border-radius:20px;
+        box-shadow:0 15px 35px rgba(0,0,0,.08);
+        transition: transform 0.4s, box-shadow 0.4s;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        opacity:0;
+
+        }
+        .card:hover{
+          transform: scale(1.1);
+
+        box-shadow:0 25px 50px rgba(0,0,0,0.15);
+        }
+        .card h3{
+        margin:15px 0 10px;
+        font-size:22px;
+        color:#000000;
+        }
+        .card p{
+        font-size:16px;
+        color:#555;
+        }
+        .card svg{
+        width:60px;
+        height:60px;
+        stroke:#FF9800;
+        margin-bottom:15px;
+        }
+
+        .card img{
+        width:50px;
+        height:50px;
+        stroke:#ff9800;
+        margin-bottom:15px;
+        }
+
+        .stats{
+        background:#111;
+        color:white;
+        display:flex;
+        justify-content:space-around;
+        flex-wrap:wrap;
+        gap:30px;
+        padding:60px 20px;
+        }
+        .stat h3{font-size:42px;color:#ff9800}
+        .stat p{margin-top:10px}
+
+        .faq-item{
+        background:white;
+        max-width:800px;
+        margin:15px auto;
+        padding:20px;
+        border-radius:12px;
+        cursor:pointer;
+        box-shadow:0 5px 20px rgba(0,0,0,.05);
+        text-align:right;
+        }
+        .faq-item p{display:none;margin-top:10px;color:#555}
+
+        footer{
+        background:#000;
+        color:white;
+        padding:25px;
+        text-align:center;
+        font-size:14px;
+        }
+
+        .whatsapp-float{
+        position:fixed;
+        bottom:20px;
+        left:20px;
+        width:65px;
+        height:65px;
+        background:#25D366;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        box-shadow:0 10px 30px rgba(0,0,0,.4);
+        z-index:999;
+        transition:.3s;
+        }
+        .whatsapp-float:hover{transform:scale(1.1)}
+
+        .show{opacity:1 !important;transition:.8s}
+        #logo_img {
+            width: 130px;
+            height: 90px;
+         }
+
+  .modal {
+  display:none;
+  position:fixed;
+  z-index:2000;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  justify-content:center;
+  align-items:center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.modal-content {
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:400px;
+  text-align:right;
+  position:relative;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-family:'Rubik',sans-serif;
+}
+
+.modal-content textarea {
+  resize:none;
+  height:100px;
+}
+
+.close {
+  position:absolute;
+  left:15px;
+  top:10px;
+  font-size:24px;
+  cursor:pointer;
+}
+
+        .modal-content button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-content button:hover {
+  transform: scale(1.03);
+}
+
+.modal-content button:active {
+  transform: scale(0.96);
+}
+
+.success-premium {
+  text-align: center;
+  padding: 50px 30px;
+  animation: fadeInScale 0.4s ease;
+}
+
+.success-icon {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  color: white;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.success-premium h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 600;
+}
+
+.success-premium p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.success-premium button {
+  background: #ff9800;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(255,152,0,.35);
+}
+
+.success-premium button:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content {
+  font-family: 'Rubik', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: #fafafa;
+  transition: all 0.2s ease;
+  text-align: right;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #ff9800;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255,152,0,0.12);
+}
+
+.modal-content button {
+  background: linear-gradient(135deg, #ff9800, #ffb347);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 40px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(255,152,0,0.35);
+  display: block;
+  margin: 15px auto 0;
+}
+
+#grid2 + div .btn-primary {
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: 0 8px 25px rgba(255,152,0,.4);
+}
+
+#grid2 + div .btn-primary:focus,
+#grid2 + div .btn-primary:active {
+    outline: none !important;
+    box-shadow: 0 8px 25px rgba(255,152,0,.4);
+}
+
+@media (max-width: 768px) {
+
+    header nav {
+        display: none;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    header {
+        justify-content: center;
+        padding: 10px 20px;
+    }
+
+    #logo_img {
+        width: 100px;
+        height: auto;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .hero-slogan {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+        #projects{
+background:#f9fafc;
+}
+
+.projects-slider{
+display:flex;
+gap:25px;
+max-width:1050px;
+margin:auto;
+overflow-x:auto;
+padding-bottom:20px;
+scroll-snap-type:x mandatory;
+}
+
+.project-card{
+flex:0 0 calc(33.33% - 17px);
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+scroll-snap-align:center;
+cursor:pointer;
+}
+
+.project-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.project-info{
+padding:15px;
+text-align:right;
+}
+
+.projects-slider::-webkit-scrollbar{
+height:8px;
+}
+
+.projects-slider::-webkit-scrollbar-thumb{
+background:#ff9800;
+border-radius:10px;
+}
+
+@media(max-width:768px){
+
+.project-card{
+flex:0 0 85%;
+}
+
+}
+
+.gallery-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.45);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+justify-content:center;
+align-items:center;
+z-index:5000;
+}
+
+.gallery-modal img{
+max-width:90%;
+max-height:85vh;
+border-radius:12px;
+}
+
+.gallery-close{
+position:absolute;
+top:30px;
+left:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+.gallery-nav{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+font-size:45px;
+color:white;
+cursor:pointer;
+padding:10px;
+}
+
+.gallery-modal img{
+max-width:90%;
+max-height:85vh;
+border-radius:12px;
+animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn{
+from{transform:scale(0.9); opacity:0;}
+to{transform:scale(1); opacity:1;}
+}
+
+.gallery-prev{
+left:40px;
+}
+
+.gallery-next{
+right:40px;
+}
+
+        .card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    transition: transform 0.4s, box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+        .hero {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('photo/photoshimri.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.hero p, .hero-slogan {
+    text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+    </style>
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <a href="#top">
+            <img src="photo/logo.png" id="logo_img"/>
+        </a>
+    </div>
+    <nav>
+        <a href="#services">שירותים</a>
+        <a href="#why">למה לבחור בי?</a>
+        <a href="#faq">שאלות נפוצות</a>
+        <a href="#contact">יצירת קשר</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>שמרי – הנדימן מקצועי</h1>
+        <p>זמינות מהירה | עבודה נקייה | אחריות מלאה</p>
+        <p>חדרה | קיסריה | אור עקיבא | בנימינה | נתניה | זכרון יעקב והסביבה</p>
+        <p class="hero-slogan">הבית שלכם <span>האחריות שלי</span></p>
+        <a class="btn btn-primary" href="#" onclick="openModal()">קבל הצעת מחיר</a>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/972526757655?text=שלום%20ראיתי%20את%20האתר%20ואני%20צריך%20הנדימן" target="_blank">
+            <svg width="20" fill="white" viewBox="0 0 32 32">
+                <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2.1 7.7L0 32l8.6-2.2c2.2 1.2 4.7 1.9 7.4 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4z"/>
+            </svg>
+            שלח וואטסאפ
+        </a>
+        <a class="btn call-btn" href="tel:0526757655">התקשר עכשיו</a>
+    </div>
+</section>
+
+<section id="services">
+    <h2>השירותים שלי</h2>
+    <div class="grid">
+        <div class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+
+
+                <path d="M3 10 L12 3 L21 10"/>
+
+
+                <rect x="5" y="10" width="14" height="11" rx="1"/>
+
+                <rect x="10" y="15" width="4" height="6"/>
+
+            </svg>
+
+            <h3>הרכבות רהיטים</h3>
+            <p>איקאה, ארונות, מיטות ועוד – הרכבה מקצועית ומדויקת</p>
+        </div>
+        <div class="card">
+            <img src="photo/hammer.png"/>
+            <h3>תליות והתקנות</h3>
+            <p>טלוויזיות, מדפים, גופי תאורה – הכל עם גימור מושלם</p>
+        </div>
+        <div class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+                <polygon points="30 6 10 36 24 36 18 58 54 20 38 20 44 6 30 6"/>
+            </svg>
+
+
+            <h3>תיקוני חשמל</h3>
+            <p>שקעים, מפסקים והחלפות – עבודה מהירה ובטוחה</p>
+        </div>
+        <div class="card">
+            <svg width="364" height="365" viewBox="0 0 364 365" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="128.5" y="88.5" width="118" height="118" rx="16.5" stroke-width="12"/>
+                <rect x="57.5" y="111.5" width="71" height="70" stroke-width="12"/>
+                <rect x="165.5" y="45.5" width="44" height="43" stroke-width="12"/>
+                <rect x="3.5" y="80.5" width="54" height="136" rx="16.5" stroke-width="10"/>
+                <rect x="119.5" y="45.5" width="42" height="136" rx="16.5" transform="rotate(-90 119.5 45.5)"
+                      stroke-width="12"/>
+                <path d="M289.5 188C289.5 182 267.5 179.167 247.5 182V110C272.5 107 314.727 107.864 337 127C372.5 157.5 357.5 233 354 237.5C344.173 240.878 309.453 246.29 293 233.5C287.5 221 289.5 202.815 289.5 188Z"
+                      stroke-width="12"/>
+                <path d="M326.5 263.5C305.333 288.5 274.208 361.5 326.5 361.5C381 361.5 347.667 298.833 326.5 263.5Z"
+                      stroke-width="12"/>
+            </svg>
+
+            <h3>אינסטלציה קלה</h3>
+            <p>תיקון נזילות, החלפת ברזים וסיפונים במהירות</p>
+        </div>
+    </div>
+</section>
+
+<section id="why">
+    <h2>למה לבחור בי?</h2>
+    <p style="max-width:750px;margin:0 auto 50px;color:#555;font-size:18px;">
+        כשמכניסים בעל מקצוע הביתה – חשוב לדעת שיש על מי לסמוך.
+        אני מתחייב לשירות אמין, מקצועי ושקוף מהשיחה הראשונה ועד סיום העבודה.
+    </p>
+    <div class="grid" id="grid2">
+        <div class="card">
+            <img src="photo/7.png"/>
+            <h3>זמינות מהירה</h3>
+            <p>מגיע מהיום להיום באזור חדרה והסביבה. לא משאיר אתכם לחכות ימים.</p>
+        </div>
+        <div class="card">
+            <svg width="305" height="295" viewBox="0 0 305 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M99.9818 52.9995C99.9817 35.3831 87.649 6.82305 150.401 5.0664C213.153 3.30975 205.728 36.6121 205.728 52.9995"
+                      stroke="#FF9800" stroke-width="10"/>
+                <path d="M20 55.9995H285C293.284 55.9996 300 62.7153 300 70.9995V147.307C300 152.262 296.476 156.452 291.661 157.271C264.696 161.858 200.307 171.93 154.992 172C109.602 172.069 42.0787 161.887 13.8252 157.266C8.73611 156.434 5.00004 152.019 5 146.796V70.9995C5 62.7153 11.7157 55.9995 20 55.9995Z"
+                      stroke="#FF9800" stroke-width="10"/>
+                <rect x="117" y="175" width="71" height="21" stroke="#FF9800" stroke-width="10"/>
+                <path d="M9.50008 157.5C6.33342 201.5 3.03402 276.506 9.50008 280.5C26.5001 291 280.5 288 290.5 280.5C300.5 273 294.5 157.5 294.5 157.5"
+                      stroke="#FF9800" stroke-width="10"/>
+            </svg>
+
+            <h3>מקצועיות אמיתית</h3>
+            <p>ביצוע מדויק, עבודה לפי סטנדרט גבוה וגימור נקי.</p>
+        </div>
+        <div class="card">
+            <img src="photo/coin.png"/>
+            <h3>מחיר הוגן ושקוף</h3>
+            <p>הצעת מחיר ברורה מראש. בלי הפתעות ובלי אותיות קטנות.</p>
+        </div>
+        <div class="card">
+            <svg width="266" height="314" viewBox="0 0 266 314" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M130 4.33752C148.833 22.3375 194.004 64.3055 251 51.8375C267 48.3375 276.5 259.338 130.5 307.838"
+                      stroke="#FF9800" stroke-width="12"/>
+                <path d="M135.647 4.33752C116.814 22.3375 71.6437 64.3055 14.6475 51.8375C-1.35254 48.3375 -10.8525 259.338 135.147 307.838"
+                      stroke="#FF9800" stroke-width="12"/>
+                <path d="M83.5 155.838L111.454 182.017C113.429 183.866 116.516 183.809 118.421 181.889L178.5 121.338"
+                      stroke="#FF9800" stroke-width="12" stroke-linecap="round"/>
+            </svg>
+
+            <h3>אחריות מלאה</h3>
+            <p>כל עבודה מגובה באחריות. אם צריך – חוזר ומסדר.</p>
+        </div>
+        <div class="card">
+            <svg width="257" height="320" viewBox="0 0 257 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="127.477" cy="82.5" r="76.5" stroke="#FF9800" stroke-width="12"/>
+                <path d="M245.285 314H11.5903C9.20044 314 7.12992 312.319 6.80085 309.952C1.4426 271.408 20.9488 200 125.977 200C235.127 200 251.333 269.053 250.191 309.328C250.117 311.965 247.923 314 245.285 314Z"
+                      stroke="#FF9800" stroke-width="12" stroke-linecap="round"/>
+            </svg>
+            <h3>יחס אישי</h3>
+            <p>מדבר בגובה העיניים, מסביר, מייעץ – לא רק מבצע והולך.</p>
+        </div>
+        <div class="card">
+            <svg width="318" height="382" viewBox="0 0 318 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M92.9695 375.5V296.294C92.9695 295.134 92.5664 294.01 91.8291 293.115L8.96948 192.5C-0.530518 177 12.9695 141.5 46.4695 168.5C91.0913 204.464 84.9995 248.5 155.5 258"
+                      stroke="#FF9800" stroke-width="12" stroke-linecap="round"/>
+                <path d="M225 375.5V296.294C225 295.134 225.403 294.01 226.14 293.115L309 192.5C318.5 177 305 141.5 271.5 168.5C226.878 204.464 230 248.5 157 258"
+                      stroke="#FF9800" stroke-width="12" stroke-linecap="round"/>
+                <circle cx="158" cy="182.5" r="41.5" stroke="#FF9800" stroke-width="12"/>
+                <path d="M168.787 47.8408C169.858 51.137 172.929 53.3691 176.395 53.3691H209.685L182.752 72.9365C179.949 74.9737 178.776 78.5849 179.847 81.8809L190.133 113.54L163.202 93.9736C160.485 92.0002 156.837 91.9388 154.063 93.7891L153.797 93.9736L126.865 113.54L137.152 81.8809C138.223 78.5847 137.049 74.9737 134.246 72.9365L107.314 53.3691H140.604C144.07 53.3691 147.141 51.137 148.212 47.8408L158.5 16.1807L168.787 47.8408Z"
+                      stroke="#FF9800" stroke-width="10"/>
+                <path d="M65.1782 85.1846C65.9815 87.6566 68.285 89.3301 70.8843 89.3301H89.2603L74.394 100.131C72.2911 101.659 71.4111 104.368 72.2144 106.84L77.8921 124.315L63.0259 113.515C60.9231 111.987 58.076 111.987 55.9731 113.515L41.1069 124.315L46.7847 106.84C47.5879 104.368 46.7079 101.659 44.605 100.131L29.7388 89.3301H48.1147C50.714 89.3301 53.0175 87.6566 53.8208 85.1846L59.4995 67.708L65.1782 85.1846Z"
+                      stroke="#FF9800" stroke-width="6"/>
+                <path d="M259.178 85.1846C259.982 87.6566 262.285 89.3301 264.884 89.3301H283.26L268.394 100.131C266.291 101.659 265.411 104.368 266.214 106.84L271.892 124.315L257.026 113.515C254.923 111.987 252.076 111.987 249.973 113.515L235.107 124.315L240.785 106.84C241.588 104.368 240.708 101.659 238.605 100.131L223.739 89.3301H242.115C244.714 89.3301 247.017 87.6566 247.821 85.1846L253.5 67.708L259.178 85.1846Z"
+                      stroke="#FF9800" stroke-width="6"/>
+            </svg>
+
+            <h3>מאות לקוחות מרוצים</h3>
+            <p>לקוחות חוזרים וממליצים באזור חדרה, קיסריה ובנימינה.</p>
+        </div>
+    </div>
+    <div style="margin-top:60px;">
+
+        <button class="btn btn-primary" onclick="openModal()">
+            קבל הצעת מחיר עכשיו
+        </button>
+
+    </div>
+</section>
+
+<section id="projects">
+
+    <h2>עבודות שביצעתי</h2>
+
+    <div class="projects-slider">
+
+        <div class="project-card">
+            <img src="photo/מקלחון.jpeg">
+            <div class="project-info">
+                <h3>תיקון מקלחון</h3>
+                <p>התקנת מקלחון בצורה מקצועית</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="photo/כיור.jpeg">
+            <div class="project-info">
+                <h3>ניקוי סיפונים</h3>
+                <p>ניקוי סיפונים במקלחות היוצר סתימות</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="photo/גג.jpeg">
+            <div class="project-info">
+                <h3>ניקוי גגות</h3>
+                <p>ניקוי לכלוך מצטבר על גגות</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="photo/וילונות.jpeg">
+            <div class="project-info">
+                <h3>התקנת וילונות</h3>
+                <p>התקנת וילונות בצורה מסודרת ונקייה</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="photo/רטיבות.jpeg">
+            <div class="project-info">
+                <h3>תיקון רטיבות</h3>
+                <p>רטיבות היא דבר שתמיד חוזר עד שהיא פוגשת אותי</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="faq">
+    <h2>שאלות נפוצות</h2>
+    <div class="faq-item">
+        <strong>אתה מגיע מהיום להיום?</strong>
+        <p>כן, ברוב המקרים ניתן להגיע באותו יום באזור חדרה והסביבה.</p>
+    </div>
+    <div class="faq-item">
+        <strong>יש אחריות על העבודה?</strong>
+        <p>בהחלט. כל עבודה מגיעה עם אחריות מלאה.</p>
+    </div>
+    <div class="faq-item">
+        <strong>מה העלות של ביקור?</strong>
+        <p>עלות ביקור נעה בין 150–300 ₪, תלוי באזור. כמובן שהעלות נכללת במחיר הסופי של התיקון.</p>
+    </div>
+    <div class="faq-item">
+        <strong>למה כדאי להזמין אותי?</strong>
+        <p>
+            <b>חיסכון בכסף:</b> אני מבצע תיקונים במגוון קטגוריות באותו הביקור, מה שחוסך עלויות של הזמנת בעלי מקצוע
+            נפרדים.<br><br>
+            <b>נוחות:</b> אני מגיע ישירות אליכם ומטפל בכל הדרוש, כך שאתם חוסכים זמן וטרחה.<br><br>
+            <b>מומחיות:</b> יש לי ניסיון בטיפול במגוון רחב של תחומים, כך שאתם יכולים להיות בטוחים שהעבודה תתבצע
+            במקצועיות ובבטיחות.<br><br>
+            <b>ניקיון:</b> חשוב לי להשאיר את המקום נקי ואסתטי בדיוק כפי שקיבלתי אותו.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>צריכים הנדימן עכשיו?</h2>
+    <a class="btn btn-primary" href="https://wa.me/972526757655?text=שלום%20אני%20צריך%20הנדימן" target="_blank">שלח
+        הודעה</a>
+</section>
+
+<footer>
+    כל הזכויות שמורות לאלעד אדרי | eladedri33@gmail.com
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/972526757655?text=שלום%20אשמח%20לפרטים" target="_blank">
+    <svg width="30" fill="white" viewBox="0 0 32 32">
+        <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2.1 7.7L0 32l8.6-2.2c2.2 1.2 4.7 1.9 7.4 1.9 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4z"/>
+    </svg>
+</a>
+
+<script>
+    const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('show')}
+    })
+    })
+    document.querySelectorAll('.card').forEach(el=>observer.observe(el))
+
+    function animateValue(id,start,end,duration){
+    let range=end-start
+    let current=start
+    let increment=end>start?1:-1
+    let stepTime=Math.abs(Math.floor(duration/range))
+    let obj=document.getElementById(id)
+    let timer=setInterval(function(){
+    current+=increment
+    obj.textContent=current+"+"
+    if(current==end){clearInterval(timer)}
+    },stepTime)
+    }
+
+
+    document.querySelectorAll(".faq-item").forEach(item=>{
+    item.addEventListener("click",()=>{
+    let p=item.querySelector("p")
+    p.style.display=p.style.display==="block"?"none":"block"
+    })
+    })
+</script>
+<div id="quoteModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <div id="formContainer">
+
+            <h2 class="modal-title">קבל הצעת מחיר</h2>
+
+            <form id="quoteForm">
+                <input type="text" name="name" placeholder="שם מלא" required>
+                <input type="tel" name="phone" placeholder="טלפון" required>
+                <input type="text" name="city" placeholder="עיר">
+                <textarea name="message" placeholder="תיאור קצר של העבודה" required></textarea>
+                <button type="submit" class="btn btn-primary">שלח בקשה</button>
+            </form>
+
+        </div>
+        <div id="successScreen" style="display:none;" class="success-premium">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>הבקשה נשלחה בהצלחה</h2>
+
+            <p>
+                תודה שפנית אלינו.<br>
+                נחזור אליך בהקדם האפשרי.
+            </p>
+
+            <button onclick="closeModal()">סגור</button>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+    (function(){
+      emailjs.init("V-MmlL_pWNV1dfU_1");
+    })();
+
+    function openModal(){
+      document.getElementById("quoteModal").style.display="flex";
+    }
+
+    function closeModal(){
+      document.getElementById("quoteModal").style.display="none";
+      document.getElementById("formContainer").style.display = "block";
+      document.getElementById("successScreen").style.display = "none";
+      document.getElementById("quoteForm").reset();
+    }
+</script>
+<script>
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const formContainer = document.getElementById("formContainer");
+  const successScreen = document.getElementById("successScreen");
+
+  formContainer.style.display = "none";
+  successScreen.style.display = "block";
+
+  emailjs.sendForm("service_dlucdtm","template_4wn5mmq", this)
+    .catch(function(error) {
+      console.log(error);
+    });
+});
+</script>
+
+<script src="https://negishot.co.il/cdn/widget.php?code=XXX"></script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll(".project-card img");
+      const modal = document.getElementById("galleryModal");
+      const modalImg = document.getElementById("galleryImage");
+      const closeBtn = document.querySelector(".gallery-close");
+      const nextBtn = document.querySelector(".gallery-next");
+      const prevBtn = document.querySelector(".gallery-prev");
+      let current = 0;
+
+      images.forEach((img,index)=>{
+        img.addEventListener("click",()=>{
+          current=index;
+          showImage();
+          modal.style.display="flex";
+        });
+      });
+
+      function showImage(){
+        modalImg.src = images[current].src;
+      }
+
+      nextBtn.onclick = ()=>{
+        current++;
+        if(current>=images.length){current=0;}
+        showImage();
+      }
+      prevBtn.onclick = ()=>{
+        current--;
+        if(current<0){current=images.length-1;}
+        showImage();
+      }
+      closeBtn.onclick = ()=>{
+        modal.style.display="none";
+      }
+    });
+
+</script>
+
+<div id="galleryModal" class="gallery-modal">
+
+    <span class="gallery-close">✕</span>
+
+    <div class="gallery-nav gallery-prev">❮</div>
+    <div class="gallery-nav gallery-next">❯</div>
+
+    <img id="galleryImage" src="" alt="">
+
+</div>
+</body>
+</html>
